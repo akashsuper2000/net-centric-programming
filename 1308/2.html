@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+        <table style="width:20%">
+            <tr>
+                <td colspan="2">
+                    <center>Grades</center>
+                </td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>93-100</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>85-92</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>77-84</td>
+            </tr>
+
+            <tr>
+                <td>D</td>
+                <td>69-76</td>
+            </tr>
+
+            <tr>
+                <td>E</td>
+                <td>61-68</td>
+            </tr>
+        </table>
+
+
+    <script type="text/javascript">
+
+       var a;
+       var n=prompt("Enter a number for the no. of rows in a pattern");
+       document.write("<br><br>For "+n+", you got");
+        for(i=61;i<=100;i++){
+            if ((i>=0) && (i<=100)){ console.log(assignGrade(i)); } else{ console.log(" undefined"); }
+        }
+
+       if ((n>=0) && (n<=100)){
+        document.write(assignGrade(n));
+        }
+        else{
+        document.write(" undefined");
+        }
+      function assignGrade(n)
+      {
+        
+        if((n>60) && (n<=68))
+        {
+            return("&nbsp;E &nbsp;");
+        }
+        else if((n>68) && (n<=76))
+        {
+            return("&nbsp;D &nbsp;");
+        }
+        else if((n>76) && (n<=84))
+        {
+            return("&nbsp;C &nbsp;");
+        }
+        else if ((n>84) && (n<=92)){
+            return("&nbsp;B &nbsp;");
+        } 
+        else if((n>92) && (n<=100))
+        {
+            return("&nbsp;A &nbsp;");
+        }
+        else{
+            return("&nbsp;the fail &nbsp;");
+        }
+        
+      }
+      </script>
+</head>
+<body>
+
+
+
+</body>
+</html> 

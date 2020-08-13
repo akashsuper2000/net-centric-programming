@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        table, th, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <table style="width:80%">
+        <tr>
+          <td colspan="2"><center>Grades</center></td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>93-100</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>85-92</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>77-84</td>
+        </tr>
+    
+        <tr>
+            <td>D</td>
+            <td>69-76</td>
+        </tr>
+
+        <tr>
+            <td>E</td>
+            <td>60-68</td>
+        </tr>
+    </table></center>
+    <script type="text/javascript">
+
+        var a;
+        var n=prompt("Enter a number for the no. of rows in a pattern");
+        document.write("<center>For "+n+", you got");
+        if ((n<100) && (n>=0)){
+         assignGrade(n)
+         }
+         else{
+         document.write(" undefined");
+         }
+       function assignGrade(n)
+       {
+         
+         if((n>=60) && (n<=68))
+         {
+             document.write("&nbsp; E &nbsp;");
+         }
+         else if((n>68) && (n<=76))
+         {
+             document.write("&nbsp; D &nbsp;");
+         }
+         else if((n>76) && (n<=84))
+         {
+             document.write("&nbsp; C &nbsp;");
+         }
+         else if ((n>84) && (n<=92)){
+             document.write("&nbsp; B &nbsp;");
+         } 
+         else if((n>92) && (n<=100))
+         {
+             document.write("&nbsp; A &nbsp;");
+         }
+         else
+         {
+             document.write("&nbsp; Fail &nbsp;");
+         }
+         
+         
+       }
+       </script>
+
+</body>
+</html> 
+

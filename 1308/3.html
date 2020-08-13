@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+
+    <script>
+
+        function celsiusToFahrenheit (event) {
+            temp = parseInt(document.getElementById('cin').value);
+            document.getElementById('ctof').innerHTML = temp.toString() + '°C is ' + (parseFloat(temp)*9/5 +
+            32).toFixed(2).toString() + '°F';
+        }
+
+        function fahrenheitToCelsius (event) {
+            temp = parseInt(document.getElementById('fin').value);
+            document.getElementById('ftoc').innerHTML = temp.toString() + '°F is ' +
+            ((parseFloat(temp)-32)*5/9).toFixed(2).toString() + '°C';
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1>Celsius to Fahrenheit</h1>
+        <input id='cin' type="text">
+        <h2 id='ctof'></h2>
+        <input type="button" onclick='celsiusToFahrenheit();' value='Submit'>
+    <br/>
+    <h1 style="margin-top: 10%;">Fahrenheit to Celsius</h1>
+        <input id='fin' type="text">
+        <h2 id='ftoc'></h2>
+        <input type="button" onclick='fahrenheitToCelsius();' value='Submit'>
+</body>
+</html>
