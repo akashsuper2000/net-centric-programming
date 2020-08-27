@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Get value of selected
+        radio button
+    </title>
+    <script>
+        function displayRadioValue() {
+            var ele = document.getElementsByName('gender');
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    document.getElementById("result").innerHTML = "Gender: " + ele[i].value;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        Select a radio button and click on Submit.
+    </p>
+
+    Gender:
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Others">Others
+
+    <br>
+
+    <button type="button" onclick="displayRadioValue()">
+        Submit
+    </button>
+
+    <br>
+
+    <div id="result"></div>
+
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Display some text when the checkbox is checked:</p>
+
+    <label for="myCheck">Checkbox:</label>
+    <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+    <p id="text" style="display:none">Checkbox is CHECKED!</p>
+
+    <script>
+        function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
