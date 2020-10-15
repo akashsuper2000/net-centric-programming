@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="purchases">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customer" minOccurs="1" maxOccurs="100">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="customer_id" type="xs:positiveInteger" />
+							<xs:element name="date" type="xs:string" />
+							<xs:element name="billing" type="xs:positiveInteger" />
+							<xs:element name="shipping_info" type="xs:string" />
+							<xs:element name="items">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" minOccurs="1" maxOccurs="100">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="product_id" type="xs:positiveInteger" />
+													<xs:element name="product_name" type="xs:string" />
+													<xs:element name="quantity" type="xs:positiveInteger"/>
+													<xs:element name="price" type="xs:positiveInteger" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

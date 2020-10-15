@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone = "no"?>
+<?xml-stylesheet type="html/xsl" href="customers.xsl"?>
+
+<!DOCTYPE purchases [
+<!ELEMENT purchases (customer+)>
+<!ELEMENT customer (customer_id, date, billing, shipping_info, items)>
+<!ELEMENT customer_id (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT billing (#PCDATA)>
+<!ELEMENT shipping_info (#PCDATA)>
+<!ELEMENT items (item+)>
+<!ELEMENT item (product_id, product_name, quantity, price)>
+<!ELEMENT product_id (#PCDATA)>
+<!ELEMENT product_name (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]>
+
+<purchases>
+    <customer>
+        <customer_id>1</customer_id>
+        <date>10-10-2020</date>
+        <billing>1500</billing>
+        <shipping_info>Chennai</shipping_info>
+        <items>
+            <item>
+                <product_id>1</product_id>
+                <product_name>Milkshake</product_name>
+                <quantity>3</quantity>
+                <price>200</price>
+            </item>
+            <item>
+                <product_id>2</product_id>
+                <product_name>Cookies</product_name>
+                <quantity>3</quantity>
+                <price>300</price>
+            </item>
+        </items>
+    </customer>
+
+    <customer>
+        <customer_id>2</customer_id>
+        <date>20-10-2020</date>
+        <billing>2000</billing>
+        <shipping_info>Mumbai</shipping_info>
+        <items>
+            <item>
+                <product_id>1</product_id>
+                <product_name>Cake</product_name>
+                <quantity>5</quantity>
+                <price>200</price>
+            </item>
+            <item>
+                <product_id>2</product_id>
+                <product_name>Chocolate</product_name>
+                <quantity>50</quantity>
+                <price>20</price>
+            </item>
+        </items>
+    </customer>
+</purchases>
